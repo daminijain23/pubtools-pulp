@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   py27:
-    runs-on: bionic
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Intsall RPm
@@ -18,7 +18,7 @@ jobs:
       - name: Run Tox
         run: tox -e py27
   static:
-    runs-on: bionic
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Intsall RPm
@@ -32,7 +32,7 @@ jobs:
       - name: Run Tox
         run: tox -e static
   coverage:
-    runs-on: bionic
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Intsall RPm
@@ -54,7 +54,7 @@ jobs:
           fail_ci_if_error: true
           verbose: true
   docs:
-    runs-on: bionic
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Intsall RPm
