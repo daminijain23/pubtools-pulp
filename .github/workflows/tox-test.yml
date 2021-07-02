@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Intsall RPm
+      - name: Install RPM
         run: sudo apt-get install -y rpm
+      - name: Upgrade pip
+        run: pip install --upgrade pip
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -21,12 +23,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Intsall RPm
+      - name: Install RPM
         run: sudo apt-get install -y rpm
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.8
       - name: Install Tox
         run: pip install tox
       - name: Run Tox
@@ -35,12 +37,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Intsall RPm
+      - name: Install RPM
         run: sudo apt-get install -y rpm
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.8
       - name: Install Tox
         run: pip install tox
       - name: Install pytest cov
@@ -57,12 +59,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Intsall RPm
+      - name: Install RPM
         run: sudo apt-get install -y rpm
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.8
       - name: Install Tox
         run: pip install tox
       - name: Run Tox
