@@ -40,7 +40,7 @@ class ClearedRepo(object):
 
 
 class ClearRepo(
-    CollectorService, UdCacheClientService, PulpClientService, PulpTask, CDNCache
+    PulpClientService, CollectorService, UdCacheClientService, PulpTask, CDNCache
 ):
     """Remove all contents from one or more Pulp repositories.
 
